@@ -7,6 +7,7 @@
 - Bootstrap commit: `a20e1220e36bcf6349a1c16c3155aa60661827ae`
 - Showcase PR: `#1`, squash merge `38ec4c2903fdc299f182d817e418b35d583c51fd`, merged at `2026-07-30T08:08:11Z`
 - Status PR: `#2`
+- Fresh-checkout correction PR: `#3`; makes generated text and the repository manifest newline-deterministic
 - Main SHA before the status PR: `38ec4c2903fdc299f182d817e418b35d583c51fd`
 - Tracked files before / after this status record: 145 / 146
 
@@ -49,4 +50,4 @@ Commercial tools, licenses, PDKs, and macro libraries are user-supplied and are 
 
 ## Self-reference boundary
 
-The status PR merge commit, its merge time, and the final `main` SHA are intentionally not embedded here because they do not exist until this file is merged. They are reported from the GitHub API in the final publication handoff.
+The status PR merge commit and its merge time were intentionally not embedded in PR #2. The correction PR merge commit, its merge time, and the final `main` SHA do not exist until this revision is merged. These values are reported from the GitHub API in the final publication handoff.
