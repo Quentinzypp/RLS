@@ -61,7 +61,7 @@ def arrow(lines: list[str], x1: float, y1: float, x2: float, y2: float, dashed: 
 
 def finish(lines: list[str], name: str) -> None:
     lines.append("</svg>")
-    (ASSETS / name).write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (ASSETS / name).write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def overview() -> None:
