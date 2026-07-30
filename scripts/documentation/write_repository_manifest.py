@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write a deterministic SHA-256 manifest for the public tree, excluding itself."""
+"""Write Git-normalized SHA-256 values for the public tree, excluding itself."""
 
 from __future__ import annotations
 
@@ -12,6 +12,19 @@ ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / "reports" / "showcase" / "repository_manifest.sha256"
 
 
+def git_normalized_sha256(path: Path) -> str:
+    relative = path.relative_to(ROOT).as_posix()
+    object_id = subprocess.run(
+        ["git", "-C", str(ROOT), "hash-object", "-w", "--path", relative, str(path)],
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True,
+    ).stdout.strip()
+    data = subprocess.run(
+        ["git", "-C", str(ROOT), "cat-file", "blob", object_id.decode("ascii")],
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True,
+    ).stdout
+    return hashlib.sha256(data).hexdigest()
+
+
 def main() -> int:
     result = subprocess.run(
         ["git", "-C", str(ROOT), "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
@@ -21,7 +34,7 @@ def main() -> int:
     paths = [path for path in paths if path != OUTPUT]
     lines = []
     for path in sorted(paths, key=lambda item: item.relative_to(ROOT).as_posix()):
-        digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        digest = git_normalized_sha256(path)
         lines.append(f"{digest}  {path.relative_to(ROOT).as_posix()}")
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")

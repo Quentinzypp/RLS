@@ -56,6 +56,21 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def git_normalized_sha256(path: Path) -> str:
+    relative = path.relative_to(ROOT).as_posix()
+    object_id = subprocess.run(
+        ["git", "-C", str(ROOT), "hash-object", "-w", "--path", relative, str(path)],
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False,
+    )
+    if object_id.returncode != 0:
+        return ""
+    data = subprocess.run(
+        ["git", "-C", str(ROOT), "cat-file", "blob", object_id.stdout.strip().decode("ascii")],
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False,
+    )
+    return hashlib.sha256(data.stdout).hexdigest() if data.returncode == 0 else ""
+
+
 def check_links(checks: Checks) -> None:
     failures: list[str] = []
     pattern = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)|!\[[^\]]*\]\(([^)]+)\)")
@@ -289,7 +304,7 @@ def main() -> int:
         manifest_ok &= listed.returncode == 0
         manifest_ok &= set(manifest_entries) == expected_paths
         manifest_ok &= all(
-            (ROOT / relative).exists() and sha256(ROOT / relative) == digest_value
+            (ROOT / relative).exists() and git_normalized_sha256(ROOT / relative) == digest_value
             for relative, digest_value in manifest_entries.items()
         )
     checks.require("repository_manifest", bool(manifest_ok), f"entries={len(manifest_entries)}")
