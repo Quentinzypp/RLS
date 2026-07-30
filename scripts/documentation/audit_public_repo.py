@@ -89,6 +89,7 @@ def write_report(name: str, title: str, status: str, body: list[str]) -> None:
     path.write_text(
         "\n".join([f"# {title}", "", f"- Status: **{status}**", *body]) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
 
 

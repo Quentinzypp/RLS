@@ -24,7 +24,7 @@ def main() -> int:
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         lines.append(f"{digest}  {path.relative_to(ROOT).as_posix()}")
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    OUTPUT.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     print(f"REPOSITORY_MANIFEST_WRITTEN files={len(lines)}")
     return 0
 

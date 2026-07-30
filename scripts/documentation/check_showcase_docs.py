@@ -310,7 +310,7 @@ def main() -> int:
         "",
     ]
     REPORT.parent.mkdir(parents=True, exist_ok=True)
-    REPORT.write_text("\n".join(lines), encoding="utf-8")
+    REPORT.write_text("\n".join(lines), encoding="utf-8", newline="\n")
     if checks.failures:
         for failure in checks.failures:
             print("FAIL", *failure, file=sys.stderr)
