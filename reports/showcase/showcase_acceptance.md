@@ -30,4 +30,4 @@
 | markdown_links | PASS | none broken |
 | powershell_syntax | PASS | all parse |
 | security_audits | PASS | 3/3 PASS |
-| repository_manifest | PASS | entries=144 |
+| repository_manifest | PASS | entries=145 |
