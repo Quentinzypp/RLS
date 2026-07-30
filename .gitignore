@@ -1,0 +1,50 @@
+# Reproducible local outputs
+/build/
+/work/
+/tmp/
+/output/
+/.cache/
+
+# EDA work databases and generated products
+*.wlf
+*.vcd
+*.fsdb
+*.ucdb
+*.dcp
+*.ddc
+*.bit
+*.bin
+*.jou
+*.str
+*.pb
+*.xpr
+*.runs/
+*.cache/
+*.sim/
+*.gen/
+work/
+transcript
+modelsim.ini
+
+# Proprietary technology payloads
+*.db
+*.lib
+*.lef
+*.gds
+*.gdsii
+
+# Vendor-generated IP payloads
+*.xci
+*.xcix
+
+# Common local/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+*.bak
+*.backup.log
+vivado.log
+vivado_pid*.str
+__pycache__/
+*.py[cod]
