@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Evidence-first verification flow</title>
+<desc id="desc">Preserved implementation evidence plus reproducible public portable/divopt checks</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#526175"/></marker></defs>
+<rect width="1200" height="630" fill="#f8fafc"/>
+<text x="48" y="54" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Evidence-first verification flow</text>
+<text x="48" y="82" font-family="Arial, sans-serif" font-size="15" fill="#526175">Preserved implementation evidence plus reproducible public portable/divopt checks</text>
+<rect x="48" y="132" width="245" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="48" y="132" width="6" height="112" rx="3" fill="#2563a6"/>
+<text x="66.0" y="159.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Deterministic vectors</text>
+<text x="66.0" y="183.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">two 65,525-sample inputs</text>
+<text x="66.0" y="203.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">SHA-256 checked</text>
+<rect x="336" y="132" width="245" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="336" y="132" width="6" height="112" rx="3" fill="#526175"/>
+<text x="354.0" y="159.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Original Xilinx RTL</text>
+<text x="354.0" y="183.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">generated-IP hierarchy</text>
+<text x="354.0" y="203.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">preserved locally</text>
+<rect x="624" y="132" width="245" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="624" y="132" width="6" height="112" rx="3" fill="#b7791f"/>
+<text x="642.0" y="159.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Implementation oracle</text>
+<text x="642.0" y="183.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">event alignment</text>
+<text x="642.0" y="203.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">bit-exact boundary</text>
+<rect x="912" y="132" width="245" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="912" y="132" width="6" height="112" rx="3" fill="#167d74"/>
+<text x="930.0" y="159.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Portable / divopt RTL</text>
+<text x="930.0" y="183.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">XCI-free</text>
+<text x="930.0" y="203.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">aligned Radix-4</text>
+<rect x="48" y="337" width="245" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="48" y="337" width="6" height="112" rx="3" fill="#2563a6"/>
+<text x="66.0" y="364.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">ModelSim checker</text>
+<text x="66.0" y="388.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">residual / weights / XZ</text>
+<text x="66.0" y="408.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">schedule</text>
+<rect x="336" y="337" width="245" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="336" y="337" width="6" height="112" rx="3" fill="#2f855a"/>
+<text x="354.0" y="364.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">1,000-update run</text>
+<text x="354.0" y="388.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">43.166 / 43.249 dB</text>
+<text x="354.0" y="408.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">684 / 689</text>
+<rect x="624" y="337" width="245" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="624" y="337" width="6" height="112" rx="3" fill="#b5413b"/>
+<text x="642.0" y="364.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">DC diagnosis</text>
+<text x="642.0" y="388.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">area / STA</text>
+<text x="642.0" y="408.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">SRAM excluded</text>
+<rect x="912" y="337" width="245" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="912" y="337" width="6" height="112" rx="3" fill="#b7791f"/>
+<text x="930.0" y="364.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Explicit blockers</text>
+<text x="930.0" y="388.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">no full PPA/signoff</text>
+<text x="930.0" y="408.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">Vivado compare excluded</text>
+<line x1="293" y1="188" x2="336" y2="188" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="293" y1="393" x2="336" y2="393" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="581" y1="188" x2="624" y2="188" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="581" y1="393" x2="624" y2="393" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="869" y1="188" x2="912" y2="188" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="869" y1="393" x2="912" y2="393" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="1065" y1="244" x2="1065" y2="286" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="912" y1="342" x2="869" y2="342" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="624" y1="342" x2="581" y2="342" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="336" y1="342" x2="293" y2="342" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="48" y="548" width="1104" height="42" rx="7" fill="#fef3c7" stroke="#ead18b"/>
+<text x="600.0" y="574.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#172033">Fresh portable run does not recreate the excluded generated-XCI FPGA baseline</text>
+</svg>

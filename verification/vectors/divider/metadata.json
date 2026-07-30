@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "marker": "PHASE4_DIVIDER_VECTOR_GENERATION_PASS",
+  "input_width": 40,
+  "fractional_width": 32,
+  "output_width": 72,
+  "rounding": "nearest_ties_negative_infinity",
+  "divide_by_zero_numeric_result": 0,
+  "seed": "0x524C5332",
+  "random_count": 1024,
+  "vector_count": 1160,
+  "class_counts": {
+    "retained_phase1b": 17,
+    "retained_phase2_32": 32,
+    "directed_boundary": 77,
+    "rls_trace_real": 5,
+    "rls_trace_imag": 5,
+    "deterministic_random": 1024
+  },
+  "source_hashes": {
+    "reports/phase1b/phase1b_divider_semantics.csv": "4776D2E3258D85142DB316DF0F1B61A01978AE40465E3BE64FFD74B9C601EE50",
+    "reports/phase2/t2_10_divider/phase2_t2_10_portable_probe.log": "1E704883E481538CD7FE330EC82B41E9B252B6E23C64F17A41B05772E62EBA02",
+    "reports/divider_optimization/divider_runtime_trace.csv": "A01846AF3835D89ABF840A835F72D03D0B9D6E6130B9ABA4A3AD9B0BE8EBE6B4"
+  },
+  "output_hashes": {
+    "divider_vectors.csv": "8BA6DDACF4B215298F9484055454EC44478622E8B2A3B2CFE6D1B109972AC75D",
+    "dividend.mem": "CE4FD9C281D805794699845032543FCC94595BAE84C6AC8244B545F15411A871",
+    "divisor.mem": "26DD75C51EAEC03AA8A81BA8A008B9F29F6F5A038F5C6A58E34A62BBB4D2DAA9",
+    "expected.mem": "598BCE5254E8046D97A5C82F91C612D6A28A71E109E74E888CDAD26B1585F673",
+    "divide_by_zero.mem": "75DC53727869A6776442565A7E5D301D4C14780B23309B7EBA8E55494974F36B"
+  }
+}
