@@ -6,7 +6,7 @@
 - Authentication: GitHub account `Quentinzypp`; Git transport `SSH`
 - Bootstrap commit: `a20e1220e36bcf6349a1c16c3155aa60661827ae`
 - Showcase PR: `#1`, squash merge `38ec4c2903fdc299f182d817e418b35d583c51fd`, merged at `2026-07-30T08:08:11Z`
-- Status PR: pending GitHub allocation
+- Status PR: `#2`
 - Main SHA before the status PR: `38ec4c2903fdc299f182d817e418b35d583c51fd`
 - Tracked files before / after this status record: 145 / 146
 
