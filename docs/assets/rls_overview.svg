@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">RLS Soft IP architecture</title>
+<desc id="desc">12-tap complex RLS | 150-cycle core | 175-cycle steady update | RTL_OBSERVED_A0</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#526175"/></marker></defs>
+<rect width="1200" height="700" fill="#f8fafc"/>
+<text x="48" y="54" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">RLS Soft IP architecture</text>
+<text x="48" y="82" font-family="Arial, sans-serif" font-size="15" fill="#526175">12-tap complex RLS | 150-cycle core | 175-cycle steady update | RTL_OBSERVED_A0</text>
+<rect x="48" y="122" width="336" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="48" y="122" width="6" height="112" rx="3" fill="#2563a6"/>
+<text x="66.0" y="149.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Reference / Desired</text>
+<text x="66.0" y="173.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">24Q13 complex inputs</text>
+<text x="66.0" y="193.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">single-reference alias</text>
+<rect x="432" y="122" width="336" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="432" y="122" width="6" height="112" rx="3" fill="#167d74"/>
+<text x="450.0" y="149.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">FIFO / Pack Memory</text>
+<text x="450.0" y="173.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">18 SRAM wrappers</text>
+<text x="450.0" y="193.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">portable semantics</text>
+<rect x="816" y="122" width="336" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="816" y="122" width="6" height="112" rx="3" fill="#2563a6"/>
+<text x="834.0" y="149.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">12-tap FIR</text>
+<text x="834.0" y="173.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">prediction Y</text>
+<text x="834.0" y="193.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">residual E = D - Y</text>
+<rect x="48" y="290" width="336" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="48" y="290" width="6" height="112" rx="3" fill="#b7791f"/>
+<text x="66.0" y="317.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">P times u / Denominator</text>
+<text x="66.0" y="341.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">P0 = 8I</text>
+<text x="66.0" y="361.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">34Q25 denominator</text>
+<rect x="432" y="290" width="336" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="432" y="290" width="6" height="112" rx="3" fill="#b5413b"/>
+<text x="450.0" y="317.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Radix-4 Divider</text>
+<text x="450.0" y="341.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">aligned iterative</text>
+<text x="450.0" y="361.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">40-edge compatibility</text>
+<rect x="816" y="290" width="336" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="816" y="290" width="6" height="112" rx="3" fill="#167d74"/>
+<text x="834.0" y="317.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Gain K</text>
+<text x="834.0" y="341.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">24Q20</text>
+<text x="834.0" y="361.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">fixed RTL slicing</text>
+<rect x="48" y="458" width="336" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="48" y="458" width="6" height="112" rx="3" fill="#2563a6"/>
+<text x="66.0" y="485.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Weight Update W</text>
+<text x="66.0" y="509.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">12 x complex 36Q27</text>
+<text x="66.0" y="529.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">serialized output</text>
+<rect x="432" y="458" width="336" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="432" y="458" width="6" height="112" rx="3" fill="#b7791f"/>
+<text x="450.0" y="485.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">P Rank-1 Update</text>
+<text x="450.0" y="509.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">40-bit accumulator</text>
+<text x="450.0" y="529.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">wrap / truncation</text>
+<rect x="816" y="458" width="336" height="112" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="816" y="458" width="6" height="112" rx="3" fill="#2f855a"/>
+<text x="834.0" y="485.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Residual / Status</text>
+<text x="834.0" y="509.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">RLS_out + weights</text>
+<text x="834.0" y="529.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">update counter</text>
+<line x1="384" y1="178" x2="426" y2="178" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="768" y1="178" x2="810" y2="178" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="384" y1="346" x2="426" y2="346" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="768" y1="346" x2="810" y2="346" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="384" y1="514" x2="426" y2="514" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="768" y1="514" x2="810" y2="514" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="978" y1="234" x2="978" y2="276" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="810" y1="332" x2="768" y2="332" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="426" y1="332" x2="384" y2="332" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="216" y1="388" x2="216" y2="444" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="384" y1="500" x2="426" y2="500" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="768" y1="500" x2="810" y2="500" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="48" y="642" width="1104" height="36" rx="6" fill="#e8eef5"/>
+<text x="600.0" y="666.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#172033">150-cycle core | 175-cycle steady update | one 208-cycle refill | alias mode</text>
+</svg>

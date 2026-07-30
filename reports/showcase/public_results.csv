@@ -1,0 +1,37 @@
+domain,metric,variant,value,unit,status,tool,evidence_file,claim_boundary
+modelsim,updates,divopt,1000,updates,PASS,ModelSim SE-64 10.6d,reports/modelsim/convergence_metrics.csv,IMPLEMENTATION_RESIDUAL_CONVERGENCE_OBSERVED
+modelsim,weights,divopt,12000,words,PASS,ModelSim SE-64 10.6d,reports/modelsim/preserved_summary.md,IMPLEMENTATION_RESIDUAL_CONVERGENCE_OBSERVED
+modelsim,schedule_175,divopt,998,intervals,PASS,ModelSim SE-64 10.6d,reports/modelsim/preserved_summary.md,RTL_OBSERVED_A0
+modelsim,schedule_208,divopt,1,intervals,PASS,ModelSim SE-64 10.6d,reports/modelsim/preserved_summary.md,RTL_OBSERVED_A0
+modelsim,valid_xz,divopt,0,samples,PASS,ModelSim SE-64 10.6d,reports/modelsim/convergence_metrics.csv,IMPLEMENTATION_RESIDUAL_CONVERGENCE_OBSERVED
+modelsim,residual_power_reduction,dout_sub_data1,43.166,dB,OBSERVED,ModelSim SE-64 10.6d,reports/modelsim/convergence_metrics.csv,IMPLEMENTATION_RESIDUAL_CONVERGENCE_OBSERVED
+modelsim,residual_power_reduction,dout_sub_data2,43.249,dB,OBSERVED,ModelSim SE-64 10.6d,reports/modelsim/convergence_metrics.csv,IMPLEMENTATION_RESIDUAL_CONVERGENCE_OBSERVED
+modelsim,steady_update,dout_sub_data1,684,update,OBSERVED,ModelSim SE-64 10.6d,reports/modelsim/convergence_metrics.csv,IMPLEMENTATION_RESIDUAL_CONVERGENCE_OBSERVED
+modelsim,steady_update,dout_sub_data2,689,update,OBSERVED,ModelSim SE-64 10.6d,reports/modelsim/convergence_metrics.csv,IMPLEMENTATION_RESIDUAL_CONVERGENCE_OBSERVED
+modelsim,residual_mismatches,reference_vs_divopt,0,samples,PASS,ModelSim SE-64 10.6d,reports/modelsim/preserved_summary.md,PRESERVED_EQUIVALENCE
+modelsim,weight_mismatches,reference_vs_divopt,0,words,PASS,ModelSim SE-64 10.6d,reports/modelsim/preserved_summary.md,PRESERVED_EQUIVALENCE
+modelsim,generated_oracle_weight_mismatches,oracle_vs_fresh_divopt,0,words,PASS,Python implementation model + ModelSim,reports/modelsim/fresh_run_summary.md,IMPLEMENTATION_ORACLE_CORRELATION
+divider,checker_passed,DIV_ITERATIVE_RADIX4_ALIGNED,1160,vectors,PASS,ModelSim SE-64 10.6d,reports/asic/divider_optimization.csv,RTL_SIMULATION
+divider,latency,DIV_ITERATIVE_RADIX4_ALIGNED,40,edges,PASS,ModelSim SE-64 10.6d,reports/asic/divider_optimization.csv,RTL_SIMULATION
+divider,logic_area,DIV_BASELINE_EXPANDED,108089.645137,area_units,DIAGNOSTIC,Design Compiler,reports/asic/divider_optimization.csv,ISOLATED_DIVIDER_STANDARD_CELL_LOGIC
+divider,logic_area,DIV_ITERATIVE_RADIX4_ALIGNED,18365.116790,area_units,DIAGNOSTIC,Design Compiler,reports/asic/divider_optimization.csv,ISOLATED_DIVIDER_STANDARD_CELL_LOGIC
+divider,area_reduction,DIV_ITERATIVE_RADIX4_ALIGNED,83.009,percent,DIAGNOSTIC,Design Compiler,reports/asic/divider_optimization.csv,ISOLATED_DIVIDER_STANDARD_CELL_LOGIC
+divider,wns_10ns,DIV_BASELINE_EXPANDED,-191.04,ns,VIOLATED,Design Compiler,reports/asic/divider_optimization.csv,PRE_LAYOUT_DIAGNOSTIC
+divider,wns_10ns,DIV_ITERATIVE_RADIX4_ALIGNED,3.13,ns,MET,Design Compiler,reports/asic/divider_optimization.csv,PRE_LAYOUT_DIAGNOSTIC
+asic,logic_area_reduction,RADIX4_ALIGNED_DIVOPT,5.586154,percent,DIAGNOSTIC,Design Compiler,reports/asic/top_logic_points.csv,STANDARD_CELL_LOGIC_ONLY_SRAM_EXCLUDED
+asic,wns_10ns,RADIX4_ALIGNED_DIVOPT,-0.09,ns,VIOLATED,Design Compiler,reports/asic/top_logic_points.csv,PRE_LAYOUT_DIAGNOSTIC
+asic,sram_wrappers,RADIX4_ALIGNED_DIVOPT,18,instances,INVENTORIED,RTL/DC,reports/asic/sram_inventory.csv,UNBOUND_SRAM_WRAPPERS
+asic,sram_bits,RADIX4_ALIGNED_DIVOPT,3257856,bits,INVENTORIED,RTL/DC,reports/asic/sram_inventory.csv,UNBOUND_SRAM_WRAPPERS
+asic,sram_area,RADIX4_ALIGNED_DIVOPT,NOT_AVAILABLE,area,NOT_AVAILABLE,NOT_AVAILABLE,reports/asic/sram_inventory.csv,NO_AUTHORIZED_MACRO_VIEW
+asic,full_ip_ppa,RADIX4_ALIGNED_DIVOPT,NOT_AVAILABLE,PPA,NOT_AVAILABLE,NOT_AVAILABLE,reports/asic/dc_logic_summary.md,SRAM_AND_BACKEND_EXCLUDED
+asic,saif_sequential_mapping,RADIX4_ALIGNED_DIVOPT,54.64,percent,BLOCKED,Power Compiler,reports/asic/power_blocker.md,PWR_415
+asic,power,RADIX4_ALIGNED_DIVOPT,NOT_AVAILABLE,mW,NOT_EVALUABLE,Power Compiler,reports/asic/power_blocker.md,INSUFFICIENT_SAIF_AND_SRAM_EXCLUDED
+asic,energy_per_update,RADIX4_ALIGNED_DIVOPT,NOT_AVAILABLE,energy,NOT_EVALUABLE,Power Compiler,reports/asic/power_blocker.md,INSUFFICIENT_SAIF_AND_SRAM_EXCLUDED
+fpga,lut,RLS12_c_MW_top,21535,CLB_LUT,RUN,Vivado 2024.2,reports/fpga/baseline_summary.md,ACCEPTED_OLD_FPGA_BASELINE
+fpga,registers,RLS12_c_MW_top,42855,CLB_registers,RUN,Vivado 2024.2,reports/fpga/baseline_summary.md,ACCEPTED_OLD_FPGA_BASELINE
+fpga,bram,RLS12_c_MW_top,103,BRAM_Tile,RUN,Vivado 2024.2,reports/fpga/baseline_summary.md,ACCEPTED_OLD_FPGA_BASELINE
+fpga,dsp,RLS12_c_MW_top,352,DSP48E2,RUN,Vivado 2024.2,reports/fpga/baseline_summary.md,ACCEPTED_OLD_FPGA_BASELINE
+fpga,setup_wns_65p104ns,RLS12_c_MW_top,55.532,ns,MET,Vivado 2024.2,reports/fpga/baseline_summary.md,ACCEPTED_OLD_FPGA_BASELINE
+fpga,hold_slack,RLS12_c_MW_top,0.010,ns,MET,Vivado 2024.2,reports/fpga/baseline_summary.md,ACCEPTED_OLD_FPGA_BASELINE
+fpga,formal_fmax_sweep,RLS12_c_MW_top,NOT_AVAILABLE,MHz,NOT_AVAILABLE,Vivado 2024.2,reports/fpga/baseline_summary.md,NO_FMAX_CLAIM
+fpga,new_comparison,original_vs_divopt,NOT_AVAILABLE,result,IN_PROGRESS_EXCLUDED,Vivado,reports/limitations/vivado_comparison_pending.md,UNCOMMITTED_SOURCE_WORKSPACE_DATA_EXCLUDED

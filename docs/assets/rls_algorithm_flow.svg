@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">Algorithm and fixed-point flow</title>
+<desc id="desc">Explicit formats, lane boundaries, and RTL-prescribed wrap/truncation</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#526175"/></marker></defs>
+<rect width="1200" height="680" fill="#f8fafc"/>
+<text x="48" y="54" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Algorithm and fixed-point flow</text>
+<text x="48" y="82" font-family="Arial, sans-serif" font-size="15" fill="#526175">Explicit formats, lane boundaries, and RTL-prescribed wrap/truncation</text>
+<rect x="315" y="120" width="570" height="58" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="315" y="120" width="6" height="58" rx="3" fill="#2563a6"/>
+<text x="333.0" y="147.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Input u, d</text>
+<text x="333.0" y="171.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">24Q13 | upper-real / lower-imag</text>
+<line x1="600" y1="178" x2="600" y2="195" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="315" y="195" width="570" height="58" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="315" y="195" width="6" height="58" rx="3" fill="#167d74"/>
+<text x="333.0" y="222.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">P times u</text>
+<text x="333.0" y="246.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">P: 36Q29 | 40-bit/component sum</text>
+<line x1="600" y1="253" x2="600" y2="270" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="315" y="270" width="570" height="58" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="315" y="270" width="6" height="58" rx="3" fill="#b7791f"/>
+<text x="333.0" y="297.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Denominator</text>
+<text x="333.0" y="321.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">34Q25 | lambda + u^H P u</text>
+<line x1="600" y1="328" x2="600" y2="345" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="315" y="345" width="570" height="58" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="315" y="345" width="6" height="58" rx="3" fill="#b5413b"/>
+<text x="333.0" y="372.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Reciprocal / K</text>
+<text x="333.0" y="396.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">24Q20 | Radix-4 Q32 -&gt; slice</text>
+<line x1="600" y1="403" x2="600" y2="420" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="315" y="420" width="570" height="58" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="315" y="420" width="6" height="58" rx="3" fill="#2563a6"/>
+<text x="333.0" y="447.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Y and E</text>
+<text x="333.0" y="471.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">36Q25 | E = D - Y</text>
+<line x1="600" y1="478" x2="600" y2="495" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="315" y="495" width="570" height="58" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="315" y="495" width="6" height="58" rx="3" fill="#167d74"/>
+<text x="333.0" y="522.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">W update</text>
+<text x="333.0" y="546.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">36Q27 | 12 complex taps</text>
+<line x1="600" y1="553" x2="600" y2="570" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="315" y="570" width="570" height="58" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="315" y="570" width="6" height="58" rx="3" fill="#b7791f"/>
+<text x="333.0" y="597.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">P update</text>
+<text x="333.0" y="621.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">36Q29 | rank-1, wrap/truncate</text>
+<rect x="48" y="150" width="220" height="105" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="48" y="150" width="6" height="105" rx="3" fill="#2f855a"/>
+<text x="66.0" y="177.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Initialization</text>
+<text x="66.0" y="201.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">P0 = 8I</text>
+<text x="66.0" y="221.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">W0 = 0</text>
+<text x="66.0" y="241.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">12 taps</text>
+<line x1="268" y1="202" x2="315" y2="202" stroke="#526175" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="932" y="310" width="220" height="130" rx="7" fill="#ffffff" stroke="#c7d0dc" stroke-width="1.5"/>
+<rect x="932" y="310" width="6" height="130" rx="3" fill="#b5413b"/>
+<text x="950.0" y="337.0" text-anchor="start" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Arithmetic contract</text>
+<text x="950.0" y="361.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">two&#x27;s-complement wrap</text>
+<text x="950.0" y="381.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">fixed bit slices</text>
+<text x="950.0" y="401.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">no saturation</text>
+<text x="950.0" y="421.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#526175">RTL_OBSERVED_A0</text>
+<line x1="885" y1="374" x2="932" y2="374" stroke="#526175" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
+</svg>
